@@ -1,34 +1,20 @@
-# JChat-Pro
+# Jchat-Pro
 
-JChat-Pro is a Python-based multi-room communication tool designed for seamless interaction. It integrates classic instant messaging with real-time voice transmission using a robust dual-protocol architecture.
+Jchat-Pro is a simple multi-room chat application built with Python. It allows users to chat in different rooms and features a basic voice intercom function.
 
----
+### ✨ Key Features
+* **Multi-room Chat:** Join different rooms to send text messages and emojis.
+* **Voice Chat:** A simple "Voice On/Off" toggle to talk with others in the same room (powered by UDP).
+* **Media Sharing:** Send images and videos (up to 8MB). Includes a basic built-in player for quick viewing.
+* **Pin Messages:** Keep important notes fixed at the top of the chat window.
+* **Custom Profiles:** Set your own avatar and manage basic account settings.
 
-### 🛠 Project Overview
-The project is built on three core pillars:
-* **Main Server:** A Flask-SocketIO backend managing authentication, JSON-based message history, and file transfers.
-* **Voice Server:** A high-performance UDP script dedicated to low-latency audio broadcasting.
-* **Client Application:** A modern desktop UI built with **PyQt6**, ensuring a smooth user experience.
+### 🔧 How it Works
+* **Backend:** Uses **Flask-SocketIO** for messaging and file transfers. Data is saved in simple **JSON files** (no complex database required).
+* **Voice Engine:** A dedicated **UDP script** handles audio data for faster transmission.
+* **Desktop UI:** Built with **PyQt6**, using multi-threading to keep the interface smooth while chatting or talking.
 
----
-
-### ✨ Core Functionalities
-* **Group Chatting:** Create or join multiple rooms to exchange text and emojis.
-* **Voice Integration:** Real-time voice streaming via **PyAudio** over UDP for instant communication.
-* **Media Handling:** Share images and videos (up to 8MB) with a built-in player and previewer.
-* **Message Pinning:** Keep important information visible at the top of the chat.
-* **Custom Profiles:** Personalize your presence with custom avatars and settings.
-
----
-
-### 🔧 Technical Implementation
-* **Hybrid Networking:** Leverages **TCP (SocketIO)** for reliable data and **UDP** for lightning-fast voice packets.
-* **Multi-threading:** Independent background threads handle voice and socket listeners, keeping the UI responsive.
-* **Lightweight Storage:** Uses a structured **JSON file system** for easy data management without the overhead of complex databases.
-
----
-
-### 🚀 Getting Started
-1. Install dependencies: `pip install flask-socketio pyqt6 pyaudio`
-2. Run the Main Server & Voice Server.
-3. Launch the Client Application.
+### 🚀 Quick Start
+1. **Install dependencies:** `pip install flask-socketio pyqt6 pyaudio`
+2. **Run the Servers:** Launch `server.py` and `voice_server.py`.
+3. **Run the Client:** Launch `client.py` and start chatting!
