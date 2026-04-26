@@ -346,7 +346,7 @@ class LoginDialog(QDialog):
         logo = QLabel()
         logo.setAlignment(Qt.AlignmentFlag.AlignCenter)
         logo.setStyleSheet("background:transparent;")
-        _pm = _load_svg_pixmap(64)
+        _pm = _load_svg_pixmap(55)
         if not _pm.isNull():
             logo.setPixmap(_pm)
         else:
@@ -952,7 +952,7 @@ class EmojiPicker(QFrame):
             QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height:0; }
         """)
         # 寬：10 欄 × 32px + 左右 padding 8px + 捲軸 8px = 336 → 用 350 留裕度
-        self.setFixedSize(370, 340)
+        self.setFixedSize(1000, 340)
         layout = QVBoxLayout(self)
         layout.setContentsMargins(4, 4, 4, 4)
         layout.setSpacing(2)
@@ -965,10 +965,11 @@ class EmojiPicker(QFrame):
         grid = QGridLayout(builtin_container)
         grid.setSpacing(2)
         grid.setContentsMargins(4, 4, 4, 4)
-        cols = 10
+        cols = 18
         for i, em in enumerate(BUILTIN_EMOJI):
             btn = QPushButton(em)
-            btn.setFixedSize(32, 32)
+            btn.setFixedSize(50, 50)
+            
             btn.setStyleSheet("font-size:18px; border:none; background:transparent; border-radius:4px;")
             btn.clicked.connect(lambda _, e=em: self._pick(e))
             grid.addWidget(btn, i // cols, i % cols)
