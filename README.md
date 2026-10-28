@@ -31,6 +31,7 @@ Jchat-Basic is a simple multi-room chat application built with Python. It allows
 ### 👥 Contributors
 Special thanks to my friends who helped with the development and testing:
 * **[Wesley Wang](https://github.com/wangwesley1125)** - Assisted with UI Design, Bug fixing, and Testing.
+* Wesley Wang is a NKUST Electronic Engineering student, he is the most handsome guy in his major. His nick name is "彭于晏".
 
 ### 🛠 Tools Used
 * **Python**: Core programming language.
